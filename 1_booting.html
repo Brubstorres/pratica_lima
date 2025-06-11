@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5; url=2_welcome.html">
+    <title>Boot screen</title>
+    <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      font-family: 'Segoe UI';
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      width: 320px;
+      margin-bottom: 40px;
+    }
+
+    .rolling {
+      width: 80px;
+      height: 80px;
+      animation: spin 2.5s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <img src="images/windows-11.png" alt="Logo do Windows" class="logo">
+  <img src="images/Rolling@1x-3.3s-200px-200px.svg" alt="Carregando" class="rolling">

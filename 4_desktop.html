@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5; url=5_bsod.html">
+    <title>Document</title>
+    <style>
+        body {
+      background: url(images/windows11-wallpaper.jpg);
+      background-size: cover;
+        }
+
+        /* Barra de tarefas fixa */
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            font-size: 14px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ícones de aplicativos */
+        .desktop-icons {
+            position: absolute;
+            top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .icon {
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .icon img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Área de ícones da área de trabalho -->
+    <div class="desktop-icons">
+        <div class="icon">
+            <img src="images/icons8-explorador-de-arquivos-novo-48.png" alt="Ícone 1">
+            <p>Arquivos</p>
+        </div>
+        <div class="icon">
+            <img src="images/logo-google-chrome-4096.png" alt="Ícone 2">
+            <p>Chrome</p>
+        </div>
+        <div class="icon">
+            <img src="images/visual-studio-code.svg" alt="Ícone 3">
+            <p>VS Code</p>
+        </div>
+        <!-- Adicione mais ícones conforme necessário -->
+    </div>
+
+    <!-- Barra de tarefas -->
+    <div class="taskbar">
+        <span>Pesquisar</span>
+        <span>16:44 Sexta-feira</span>
+    </div>
+
+</body>
+</html>
