@@ -3,47 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5; url=5_bsod.html">
-    <title>Document</title>
+    <title>Área de Trabalho</title>
     <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-      background: url(images/windows11-wallpaper.jpg);
-      background-size: cover;
-        }
-
-        /* Barra de tarefas fixa */
-        .taskbar {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #333;
+            background: url(images/windows11-wallpaper.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            font-size: 14px;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        /* Ícones de aplicativos */
+        /* Ícones da área de trabalho */
         .desktop-icons {
             position: absolute;
             top: 20px;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            gap: 1px;
+            padding: 10px;
             width: 100%;
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .icon {
             text-align: center;
             color: white;
-            font-size: 16px;
+            font-size: 11px;
             cursor: pointer;
+            text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
         }
 
         .icon img {
@@ -51,11 +47,49 @@
             height: 50px;
             margin-bottom: 5px;
         }
+
+        /* Barra de tarefas */
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(236, 236, 236);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            font-size: 14px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+
+        .taskbar-icons {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .taskbar-icons img {
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+        }
+
+        /* Relógio e data no canto direito */
+        .taskbar-time {
+            position: absolute;
+            right: 15px;
+            bottom: 8px;
+            text-align: right;
+            font-size: 12px;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Área de ícones da área de trabalho -->
+    <!-- Ícones da área de trabalho -->
     <div class="desktop-icons">
         <div class="icon">
             <img src="images/icons8-explorador-de-arquivos-novo-48.png" alt="Ícone 1">
@@ -69,13 +103,22 @@
             <img src="images/visual-studio-code.svg" alt="Ícone 3">
             <p>VS Code</p>
         </div>
-        <!-- Adicione mais ícones conforme necessário -->
     </div>
 
     <!-- Barra de tarefas -->
     <div class="taskbar">
-        <span>Pesquisar</span>
-        <span>16:44 Sexta-feira</span>
+        <div class="taskbar-icons">
+            <img src="images/icons8-explorador-de-arquivos-novo-48.png" alt="Arquivos" title="Arquivos">
+            <img src="images/logo-google-chrome-4096.png" alt="Chrome" title="Chrome">
+            <img src="images/visual-studio-code.svg" alt="VS Code" title="VS Code">
+            <img src="images/windows-11.png" alt="Iniciar" title="Iniciar">
+            <img src="images/Microsoft_Store_Fluent_Design_icon_(2).png" alt="Microsoft Store"
+             title="Microsoft Store">
+        </div>
+        <div class="taskbar-time">
+            <div>09:10</div>
+            <div>13/06/2025</div>
+        </div>
     </div>
 
 </body>
