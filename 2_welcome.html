@@ -2,42 +2,125 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <!-- <meta http-equiv="refresh" content="5; url=3_login.html"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5; url=3_login.html">
   <title>Hora e Data</title>
   <style>
+    @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+          }
+
+
     body {
-      font-family: "Segoe UI", sans-serif;
-      background-color: #f0f0f0;
-      background: url(images/windows11-default-wallpaper-scaled.jpg);
-      background-size: cover;
-    }
-
-    .relogio {
-      text-align: center;
-      margin-top: 100px;
-    }
-
-    h1 {
-      font-size: 87px;
+      animation: 500ms fadeIn;
       margin: 0;
-      font-weight: normal;
-      color: white;
+      padding: 0;
+      height: 100vh; /* faz com que o body ocupe toda a altura da tela */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte similar ao Windows */
+      background: url("images/windows11-default-wallpaper-scaled.jpg") no-repeat center center fixed;
+      background-size: cover; /* faz a imagem preencher todo o fundo */
+      display: flex;
+      flex-direction: column; /* organiza o conteúdo em coluna */
+      justify-content: space-between; /* espaço entre relógio e widgets */
     }
 
-    h2 {
-      font-size: 20px;
-      margin: 10px 0 0;
-      font-weight: normal;
-      color: rgba(255, 255, 255, 0.927);
-    }
-    
+.relogio {
+  text-align: center; /* centraliza o texto */
+  margin-top: 80px; /* distância do topo da tela */
+}
+
+.relogio h1 {
+  font-size: 80px; /* tamanho grande para o horário */
+  margin: 0;
+  font-weight: normal;
+  color: #fdfdfd; /* cor branca */
+}
+
+.relogio h2 {
+  font-size: 20px; /* tamanho menor para a data */
+  color: rgba(255, 255, 255, 0.8); /* branco mais suave/transparente */
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.noticias {
+  display: flex; /* organiza os widgets lado a lado */
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 20px; /* espaço entre os widgets */
+  padding: 20px 30px;
+}
+
+.widget {
+  background-color: rgba(60, 60, 60, 0.863); /* fundo escuro semi-transparente */
+  color: white;
+  width: 340px; /* largura dos widgets */
+  padding: 12px 16px;
+  border-radius: 10px; /* bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* sombra externa */
+  backdrop-filter: blur(10px); /* desfoque de fundo estilo "vidro fosco" */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px; /* altura mínima dos widgets */
+}
+
+.widget img {
+  width: 100%;
+  height: 90px; /* altura fixa para as imagens */
+  object-fit: cover; /* corta a imagem para preencher sem distorção */
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.descricao {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85); /* branco levemente transparente */
+  margin-bottom: 8px;
+}
+
+.link {
+  font-size: 12px;
+  color: rgba(200, 200, 255, 0.9); /* azul claro para simular link */
+}
   </style>
 </head>
 <body>
   <div class="relogio">
-    <h1>14:31</h1>
-    <h2>Terça-feira, 11 de Junho de 2025</h2>
+    <h1>08:13</h1>
+    <h2>sexta-feira, 13 de junho</h2>
   </div>
-  
+
+  <div class="noticias">
+    <div class="widget">
+      <div class="titulo">São Paulo</div>
+      <div class="descricao">🌤️ 11°C — AQI 54<br>Qualidade do ar: moderada</div>
+      <div class="link">Ver previsão completa</div>
+    </div>
+
+    <div class="widget">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=600&q=80" alt="Paisagem">
+      <div class="titulo">Maravilha Diária</div>
+      <div class="descricao">Drone captura vistas encantadoras da joia escondida...</div>
+      <div class="link">Assista a mais vídeos como esse</div>
+    </div>
+
+    <div class="widget">
+      <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?fit=crop&w=600&q=80" alt="Teste">
+      <div class="titulo">Teste diário</div>
+      <div class="descricao">De acordo com o Guinness World Records, qual é o single d...</div>
+      <div class="link">Faça o teste</div>
+    </div>
+  </div>
 </body>
 </html>
